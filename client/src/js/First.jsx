@@ -1,7 +1,16 @@
 import React, { Component } from "react";
+import Login from "./login/Login.jsx";
 
 export default class First extends Component {
+
     render() {
-        return <h1>Header 1</h1>
+        return (
+            <div>
+                <div>
+                    <h1>Login</h1>
+                </div>
+                <Login/>
+            </div>
+        );
     }
 }
