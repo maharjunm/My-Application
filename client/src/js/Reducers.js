@@ -1,8 +1,10 @@
 import { combineReducers } from "redux";
 import { printDetails } from "./../js/login/reducers/SampleReducer";
+import { getUsername } from "./../js/login/reducers/UserNameReducer";
 
 const myApplicationReducers = combineReducers({
-    printDetails
+    printDetails,
+    getUsername
 });
 
 export default myApplicationReducers;

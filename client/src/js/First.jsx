@@ -9,8 +9,10 @@ export default class First extends Component {
                 <div>
                     <h1>Login</h1>
                 </div>
-                <Login/>
+                <Login dispatch={ () => {}}/>
             </div>
         );
     }
 }
+
+

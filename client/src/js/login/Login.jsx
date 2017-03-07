@@ -1,10 +1,12 @@
 import React, { PropTypes, Component } from "react";
+import { returnAction } from "./actions/SomeActions";
+import ShowUserName from "./ShowUsername";
+import { connect } from "react-redux";
 
-export default class Login extends Component {
+export class Login extends Component {
 
     fun1() {
-        console.log(this.refs.username.value);
-        console.log(this.refs.password.value);
+        this.props.dispatch(returnAction(this.refs.username.value));
     }
 
     render () {
@@ -17,10 +19,18 @@ export default class Login extends Component {
                         <button>Login</button>
                     </form>
                 </div>
+                <ShowUserName/>
             </div>
         );
     }
 }
 
+function store(store) {
+    return store;
+}
+
 Login.propTypes = {
+    "dispatch": PropTypes.func.isRequired
 };
+
+export default connect(store)(Login);
